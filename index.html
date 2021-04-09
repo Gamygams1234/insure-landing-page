@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Insure landing page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
+    rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+</head>
+
+<body>
+  <header class="main-header fw-400 container karla ">
+    <div class="top-head">
+      <h1 class="name"><a href="#"><img src="./images/logo.svg" alt=""></a></h1>
+      <div id="navbar-toggle">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+    </div>
+    <ul id="main-nav" class="main-nav no-display">
+      <li><a href="#">How we work</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Account</a></li>
+      <li><a href="#" type="button" class="btn btn-dark">View plans</a></li>
+    </ul>
+  </header>
+  <!--/.main-header-->
+
+  <!-- How we work
+  Blog
+  Account
+  View plans
+
+  Humanizing your insurance.
+
+  Get your life insurance coverage easier and faster. We blend our expertise
+  and technology to help you find the plan that’s right for you. Ensure you
+  and your loved ones are protected.
+
+  View plans
+
+  We’re different
+
+  Snappy Process
+
+  Our application process can be completed in minutes, not hours. Don’t get
+  stuck filling in tedious forms.
+
+  Affordable Prices
+
+  We don’t want you worrying about high monthly costs. Our prices may be low,
+  but we still offer the best coverage possible.
+
+  People First
+
+  Our plans aren’t full of conditions and clauses to prevent payouts. We make
+  sure you’re covered when you need it.
+
+  Find out more about how we work
+
+  How we work
+
+  Our company
+
+  How we work
+  Why Insure?
+  View plans
+  Reviews
+
+  Help me
+
+  FAQ
+  Terms of use
+  Privacy policy
+  Cookies
+
+  Contact
+
+  Sales
+  Support
+  Live chat
+
+  Others
+
+  Careers
+  Press
+
+  Licenses -->
+
+  <script>
+
+    let mainNav = document.getElementById("main-nav");
+    let navBarToggle = document.getElementById("navbar-toggle");
+
+    navBarToggle.addEventListener("click", function () {
+      if (mainNav.classList.contains("no-display")) {
+        mainNav.classList.remove("no-display");
+        navBarToggle.innerHTML = '<i class="fas fa-times"></i>'
+      } else {
+        mainNav.classList.add("no-display");
+        navBarToggle.innerHTML = '<i class="fas fa-bars"></i>'
+      }
+
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.karla {
+  font-family: "Karla", sans-serif;
+}
+
+.dm-sans {
+  font-family: "DM Serif Display", serif;
+}
+
+body .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+body .main-header .top-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+body .main-header .top-head .name {
+  margin: 0;
+}
+body .main-header .top-head .name a {
+  text-align: center;
+  display: block;
+}
+body .main-header .top-head #navbar-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #2d2640;
+  padding: 10px;
+  height: 2em;
+  width: 2em;
+}
+body .main-header .main-nav {
+  padding-top: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #2b272f;
+  height: calc(100vh - 82px);
+  background-image: url("../images/bg-pattern-mobile-nav.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+body .main-header .main-nav a {
+  text-align: center;
+  display: block;
+  padding: 15px 15px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+body .main-header .main-nav .btn {
+  background-color: #2b272f;
+  border-color: white;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 564px) {
+  .no-display {
+    display: none;
+  }
+}
+@media screen and (min-width: 564px) {
+  body .main-header,
+body .main-nav {
+    display: flex;
+  }
+  body .main-header {
+    align-items: center;
+    justify-content: space-between;
+  }
+  body .main-header .top-head {
+    padding-left: 0;
+  }
+  body .main-header .top-head #navbar-toggle {
+    display: none;
+  }
+  body .main-header .main-nav {
+    height: auto;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    background-image: none;
+  }
+  body .main-header .main-nav a {
+    color: #837d87;
+  }
+  body .main-header .main-nav a:hover {
+    color: #2b272f;
+  }
+  body .main-header .main-nav .btn {
+    color: #2d2640;
+    background-color: white;
+    border-radius: 0;
+  }
+  body .main-header .main-nav .btn:hover {
+    color: white;
+    background-color: #2b272f;
+  }
+}
