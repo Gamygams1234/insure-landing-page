@@ -90,7 +90,7 @@
   padding-bottom: 100px;
 }
 .section-1 .left-side h1 {
-  font-size: 2.3em;
+  font-size: 3em;
   z-index: 4;
 }
 .section-1 .left-side p {
@@ -134,8 +134,66 @@
 }
 
 .section-2 {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 150px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.section-2 .small-border {
+  width: 30%;
+  border-top: 0.1rem solid #c396c6;
+}
+.section-2 h2 {
+  font-size: 3em;
+  color: #2b272f;
+}
+.section-2 .section-2-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.section-2 .section-2-grid .grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-2 .section-2-grid .grid-item h3 {
+  font-size: 2em;
+}
+.section-2 .section-2-grid .grid-item p {
+  line-height: 1.5;
+}
+
+.section-3 {
+  margin-left: 24px;
+  margin-right: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #2b272f;
+  text-align: center;
+  background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+.section-3 h3 {
+  color: white;
+  font-size: 2.5em;
+}
+.section-3 .how-we-work button {
+  text-transform: uppercase;
+  padding: 10px 30px;
+  background-color: #2b272f;
+  border-color: white;
+}
+.section-3 .how-we-work button:hover {
+  color: #2b272f;
+  background-color: white;
 }
 
 @media screen and (max-width: 564px) {
@@ -251,5 +309,39 @@ body .main-nav {
     left: 0px;
     bottom: -250px;
     z-index: 3;
+  }
+
+  .section-2 {
+    padding-left: 168px;
+    padding-right: 168px;
+    padding-top: 250px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .section-2 .section-2-grid {
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .section-2 .section-2-grid .grid-item {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 2em;
+  }
+  .section-2 .section-2-grid .grid-item:nth-child(3) {
+    margin-right: 0;
+  }
+
+  .section-3 {
+    grid-template-columns: 1fr 1fr;
+    margin-right: 168px;
+    margin-left: 168px;
+    padding-left: 75px;
+    padding-right: 75px;
+    text-align: left;
+  }
+  .section-3 .how-we-work {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
