@@ -24,10 +24,6 @@ $veryLightGray: hsl(0, 0%, 98%);
     z-index: 4;
 }
 
-.container {
-    padding-right: 0;
-    padding-left: 0;
-}
 .main-header {
     // padding-top: 0.5em;
     // padding-bottom: 0.5em;
@@ -175,6 +171,7 @@ $veryLightGray: hsl(0, 0%, 98%);
         grid-template-columns: 1fr;
 
         .grid-item {
+            color: $veryDarkViolet;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -202,6 +199,7 @@ $veryLightGray: hsl(0, 0%, 98%);
     background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
     background-position: right top;
     background-repeat: no-repeat;
+    margin-bottom: 130px;
     h3 {
         color: white;
         font-size: 2.5em;
@@ -216,6 +214,66 @@ $veryLightGray: hsl(0, 0%, 98%);
         button:hover {
             color: $veryDarkViolet;
             background-color: white;
+        }
+    }
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $veryLightGray;
+    background-image: url("../images/bg-pattern-footer-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+
+    .footer-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .social-links {
+            font-size: 1.7em;
+            a {
+                text-decoration: none;
+                color: $darkGrayishViolet;
+                transition: all 0.3s ease-in-out;
+            }
+            a:hover {
+                color: $veryDarkViolet;
+            }
+        }
+    }
+    .border {
+        border-top: 0.1rem solid $grayishBlue;
+    }
+    .footer-bottom {
+        text-transform: uppercase;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .link-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            p {
+                color: $grayishBlue;
+                font-size: 1em;
+            }
+            a {
+                color: $veryDarkViolet;
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+                margin-bottom: 1em;
+            }
+            a:hover {
+                text-decoration: underline;
+                font-size: 1em;
+            }
         }
     }
 }
@@ -247,14 +305,18 @@ $veryLightGray: hsl(0, 0%, 98%);
                 padding-top: 0px;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-evenly;
                 background-color: white;
                 background-image: none;
+
                 a {
                     color: $darkGrayishViolet;
+                    // using a text shadow, we are not disrupting
+                    transition: text-shadow 0.3s;
                 }
                 a:hover {
                     color: $veryDarkViolet;
+                    text-shadow: 0 0 0.65px $veryDarkViolet, 0 0 0.65px $veryDarkViolet;
                 }
 
                 .btn {
@@ -367,10 +429,29 @@ $veryLightGray: hsl(0, 0%, 98%);
         padding-left: 75px;
         padding-right: 75px;
         text-align: left;
+        background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
         .how-we-work {
             display: flex;
             align-items: center;
             justify-content: flex-end;
+        }
+    }
+
+    footer {
+        padding-right: 168px;
+        padding-left: 168px;
+        background-image: url("../images/bg-pattern-footer-desktop.svg");
+        .footer-top {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .footer-bottom {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            .link-group {
+                justify-content: flex-start;
+                align-items: flex-start;
+                text-align: left;
+            }
         }
     }
 }
